@@ -11,15 +11,7 @@ phases:
   build:
     commands:
       - ng build
-  post_build:
-    commands:
-      - echo Entered the post_build phase...
-      - cp package.json dist/admin-panel-layout
-      - cp server.js dist/admin-panel-layout
-      - echo files copied...
+      - apt-get update
+      - apt-get install zip
+      - zip -r application.zip dist server.js package.json
       
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: no
-  base-directory: 'dist/admin-panel-layout'
