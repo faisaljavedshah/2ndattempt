@@ -11,5 +11,9 @@ phases:
   build:
     commands:
       - ng build
+      
       - zip -r application.zip dist server.js package.json
       
+artifacts:
+  files:
+      - application.zip
