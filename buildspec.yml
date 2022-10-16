@@ -11,7 +11,5 @@ phases:
   build:
     commands:
       - ng build
-      - apt-get update
-      - apt-get install zip
       - zip -r application.zip dist server.js package.json
       
